@@ -15,15 +15,6 @@ class ImageFigure extends HTMLElement {
       </figure>
     `;
   }
-
-  attributeChangedCallback(name, oldValue, newValue) {
-    this[name] = newValue;
-    this.render();
-  }
-
-  static get observedAttributes() {
-    return ["caption", "src", "alt"];
-  }
 }
 
 customElements.define("image-figure", ImageFigure);
